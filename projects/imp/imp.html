@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>
+            I.M.P.
+        </h1>
+            <h2>
+                Instant Message Phonography
+            </h2>
+                <h3>
+                    Project Overview
+                </h3>
+                    <p>
+                        I.M.P. is a reimagining of the popular paper game, Hangman, and twists its gameplay from guessing words based on their spelling, to guessing words based on their phonetic makeup. 
+                        While I.M.P. has single player puzzles, it really shines when playing with two players. In two-player mode, one player creates a word using a bank of phonemes and provides its correct spelling, and the second player attempts to decipher the hidden word by guessing possible sounds and typing their final guess once they feel confident, or when they run out of phoneme guesses.
+                    </p>
+                    <h4>
+                        Platform
+                    </h4>
+                        <p>
+                            Godot, using GDScript
+                        </p>
+                    <h4>
+                        Contributions
+                    </h4>
+                        <p>
+                            Programming, Art, Sound Design, Game Design
+                        </p>
+            <h2>
+                Technical
+            </h2>
+                <h3>
+                    Password Creation
+                </h3>
+                    <p>
+                        Passwords are created by encoding a player's typed and phonetic representation of the word that they created, that they then pass onto the next player. 
+                        Players can use a button to copy their mystery word's spelling and phonemes to their clipboard and send it to the next player in an indecipherable form, and the receiving player can click a button to paste in the encoded word for I.M.P. to decode which triggers the guessing phase of I.M.P.'s game loop.
+                        Unfortunately due to a problem with the web build of I.M.P., data from the player's clipboard is not accessed the same way as an executable build. Luckily, I found a solution posted online of a workaround that allows for players to copy and paste passwords through a browser prompt. I have the source of that fix listed in my Additional Links section on the header of this page. The system still works fine when ran as an executable, but this solution fixed the web build bug.
+                        Two players can immediately play on their own system after one player has built a word, but this system is intended for players on two different systems at two different times to play using  uniquely built words that they have created.
+                        I created this system to allow for I.M.P. to be played similarly to popular online games like Wordle, while leaving in an opportunity for playful miscommunication due to how each player could differ in what they consider is the correct pronunciation of a word.
+                    </p>
+            <h2>
+                Creative
+            </h2>
+                <h3>
+                    Phoneme Visualization
+                </h3>
+                    <p>
+                        The bank of phonemes that players can use to build their word use an animation of my mouth pronouncing of each phoneme, edited by applying a filter reminiscent of grainy VHS style video. 
+                        I also recorded my voice to provide the audio representation of each phoneme's sound, with added effects to make the sample of the sound appear otherworldly.
+                        A common word bank allows a standardized pronunciation of phonemes which intends to ground the player's perception of how their hidden word is pronounced using the same tools the second player will use to decode it.
+                    </p>
+                <h3>
+                    VHS Meets Grotesque
+                </h3>
+                    <p>
+                        I.M.P.'s aesthetic is a combination of VHS and CRT TV visual artifacts that are built into an monstrous organism whose body is used to control the game's main mechanics. 
+                        To create a representation of retro television aesthetics, I created a shader to emulate CRT scan lines, a static-like series of sprites using P5.js that are played as an overlaying animation on top the screen, and the font used in the menus.
+                        To add to I.M.P.'s VHS aesthetic, I used a Creative Commons 0 licensed VHS shader made by Cyanone from godotshaders.com called "VHS with wiggle". A link to this shader can be found within the Additional Links page linked from the header at the top of this page.
+                    </p>
+            <h2>
+                Interpretive
+            </h2>
+                <h3>
+                    Reimagining Hangman
+                </h3>
+                    <p>
+                        This project began as a reimagining of a prototype called Speech and Spell that I had made for the Experimental Games class at UC Santa Cruz. Speech and Spell's gameplay was centered around constructing words using phonemes after being prompted with the typed version of the word. After players build the requested word, they would see a creature attempt to perform their phonetic spelling in a speech and reacted accordingly to how accurate their construction was with the correct answer.
+                        After I completed the prototype, I wondered how fun it would be to have a two-player version of that game, and realized how close it was to one of my favorite quick paper-based games, Hangman. 
+                        When I added a phonetic twist on Hangman, it created a new sense of variety to its gameplay because of the wide variety of ways that words can be pronounced. Because there are more phonemes in the English language than letters, during the guessing phase I.M.P. creates a pool of possible phonemes in the word for the guessing player to choose from, and slowly narrows the list down as they begin to guess.
+                        Players can play all of the correct guesses they have made so far to sound out the word, and type their final answer once they are ready to see if they are correct.
+                    </p>
+        <p>
+            <a href="../index.html">Home</a>
+        </p>
+        <p>
+            <a href="../projects.html">Projects</a>
+        </p>
+    </body>
+</html>

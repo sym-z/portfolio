@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+            <h1>
+                Picross: NCURSES
+            </h1>
+                <h2>
+                    Picross in the Terminal
+                </h2>
+                    <h3>
+                        Project Overview
+                    </h3>
+                        <p>
+                            This project was a self imposed challenge for myself to keep my mind fresh in between my first and second quarter at UC Santa Cruz. I chose to create an implementation of one of my favorite puzzle games, Picross, that is playable in the terminal with the ability to create custom puzzles. The project is written entirely in C, except for the Makefile, and uses the NCURSES library to draw to specific areas of the screen and have the UI respond to the player's input in real time.
+                        </p>
+                        <h4>
+                            Platform
+                        </h4>
+                            <p>
+                                Terminal Shell, C-Language, NCURSES Library
+                            </p>
+                        <h4>
+                            Contributions
+                        </h4>
+                            <p>
+                                Programming
+                            </p>
+                <h2>
+                    Technical
+                </h2>
+                    <h3>
+                        NCURSES Library
+                    </h3>
+                        <p>
+                            This project was written entirely in C, making use of the programming library, NCURSES, that is often used to create textual user interfaces for terminal based programs. This library allowed me to draw characters to specific areas of the terminal, refresh and redraw the interface upon user input, and make use of colored background for characters to show highlight information and notify players about incorrect and correct guesses.  
+                            For more information about the NCURSES library, check out a link to its documentation in the Additional Links section on the header of this page.
+                        </p>
+                    <h3>
+                        C-Language Restriction
+                    </h3>
+                        <p>
+                            This project was my way of checking my aptitude with the C programming language after finishing CSE 13S (Computer Systems and C Programming) at UC Santa Cruz, so all of the numbers that display clues about how many spots in each row and column are filled in the puzzle are held in a custom data structure called a "clue queue". Each puzzle is also its own data structure which holds information about the puzzle's solution and which spots have been marked correctly or incorrectly.
+                            The individual files used to make these data structures are separated into header (.h) and implementation (.c) files and are compiled using a Makefile that I wrote.
+                        </p>
+                    <h3>
+                        Creating Custom Puzzles from Text Files
+                    </h3>
+                        <p>
+                            Players have the ability to edit three custom puzzles as text files by providing a name, size, and encoding of their puzzle's solution using a specific notation shown here.
+                        </p>
+                    <h3>
+                        AI Disclaimer
+                    </h3>
+                        <p>
+                            As a way of looking up documentation for NCURSES and debugging certain aspects of my code that were not successfully compiling, I used ChatGPT as a tool for pointing out parts of my code that were possibly causing compilation errors, and to look up functions that I could make use of from the NCURSES library.
+                        </p>
+        <p>
+            <a href="../index.html">Home</a>
+        </p>
+        <p>
+            <a href="../projects.html">Projects</a>
+        </p>
+        </body>
+    </html>
