@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>
+            RED HERRING
+        </h1>
+            <h2>
+                An Arcade Game Adaptation
+            </h2>
+                <h3>
+                    Project Overview
+                </h3>
+                    <h4>
+                        Collaboration with Rozy Dixon
+                    </h4>
+                        <p>
+                            RED HERRING is a collaborative adaptation of the Midway arcade game Space Zap! (1980). Originally made for a Game Boy themed game jam with the surprise prompt, "Horror" in 2024, RED HERRING has since been updated with several quality of life improvements. 
+                            Players control a stationary can of fish in the center of the screen and fire ghostly fish spirits at incoming enemies in the form of severed fish heads, tentacles and eyeballs. 
+                            RED HERRING keeps track of the player's current and high score and allows them to enter their initials into a persisting high score leaderboard after a game session.
+                            RED HERRING emphasizes fast paced decision making and becomes more difficult as the player adapts to its gameplay. 
+                            Note: This version of RED HERRING is titled RED HERRING V2 on itch.io, this is intentional and is my way of preserving the original version of the game at the state it was when the game jam ended.
+                        </p>
+                    <h4>
+                        Platform
+                    </h4>
+                        <p>
+                            Godot, written using GDScript
+                        </p>
+                    <h4>
+                        Contributions
+                    </h4>
+                        <h5>
+                            Jack Sims
+                        </h5>
+                            <p>
+                                Programming, Sound Design, Game Design, Shaders
+                            </p>
+                        <h5>
+                            Rozy Dixon
+                        </h5>
+                            <p>
+                                2D Animation, 2D Art, UI Art, Game Design
+                            </p>
+                <h2>
+                    Technical
+                </h2>
+                    <h3>
+                        Scaling Difficulty
+                    </h3>
+                        <p>
+                            For every 10 enemies that the player defeats, RED HERRING slowly becomes harder. When the 10th enemy is defeated, an event is triggered that changes the spawn rate of each enemy type. If a player loses one of their lives, RED HERRING returns them to the scaled difficulty they were at before, always pushing them to their limit. 
+                        </p>
+                    <h3>
+                        Persisting High Scores
+                    </h3>
+                        <p>
+                            A high score system has been implemented that allows players to save their initials and score to a persisting leaderboard. 
+                            Though I initially implemented the system encoding local JSON files with score data, I had to convert it to make use of an addon script allowing for the HMTL export of RED HERRING to make use of the browser's local storage system to save the player's game when playing on itch.io. The MIT licensed addon script "Local Storage Plugin" by Hwosch was used to refactor my save system, and a link to its source can be found in the Additional Links section of the header at the top of this page.
+                            When entering same initials that were previously used on the leaderboard, a prompt will be shown that allows the player to choose whether or not to overwrite that score on the leaderboard.
+                            Note: Due to how LocalStorage is managed with itch.io and specific browsers, scores can sometimes be deleted after a while of not visiting the page. Things such as "Blocking 3rd Party Cookies" can effect saving and its longevity. When running Red Herring on a local server, I have experienced no issues with losing saved data, however when Red Herring is hosted on itch.io and used with certain browsers, saves can occasionally be lost.
+                        </p>
+                <h2>
+                    Interpretive
+                </h2>
+                    <h3>
+                        Existing Media, New Console Constraints
+                    </h3>
+                        <p>
+                            RED HERRING is an adaptation of an arcade cabinet game, and was originally made to fit the constraints of a GameBoy. Our implementation originally was restricted to a limited color palette, limited resolution, and a limited control scheme which was something that Rozy and I had to work around when creating this adaptation. 
+                            We found that the cabinet's control scheme's limitations played into our favor when creating this adaptation, and that the mechanics translated nicely to our constraints. Instead of using the cabinet's method of firing when a directional button is pressed, we opted to allow the directional buttons to aim the player's shot and used the 'A' and 'B' buttons to attack, which allows players to hit both attack buttons in rapid succession.
+                        </p>
+                    <h3>
+                        Adding to the Design of RED HERRING
+                    </h3> 
+                        <p>
+                            When Rozy and I returned to this project and were no longer required to adhere to the constraints of the GameBoy, we made a few changes to add more variety to RED HERRING's gameplay. 
+                            I increased the game's resolution to allow for more detailed pixel art, and added in a combo-based special system that allows players to clear the screen of enemies once they have hit enough successive enemies without missing. The special meter is shown as a circular progress bar under the player, notifying players that the ability is ready once the disk forms into a complete circle. I created a dot matrix-like shader for the display to further add to the original GameBoy aesthetic as well. 
+                            I added new sounds for the player's attack and for the notification of their special attack being ready, as well as a new sound effect for when it is used.
+                            Rozy added an updated player sprite, new backgrounds to use for the leaderboard screens, a new controls screen that shows how to use the special attack, and a new special attack animation.
+                            When coming back to this project, we didn't want to change it very much, and we mostly wanted to add polish by creating a leaderboard system, adding new art and audio, and implementing the aforementioned special system.
+                        </p>
+        <p>
+            <a href="../index.html">Home</a>
+        </p>
+        <p>
+            <a href="../projects.html">Projects</a>
+        </p>
+    </body>
+</html>

@@ -29,18 +29,62 @@
             <h2>
                 Technical
             </h2>
-            
-        
-        
-        
-        
-        
-        
+                <h3>
+                    Random Level Generation
+                </h3> 
+                    <p>
+                        Each floor of the dungeon is built using an implementation of Prim's Maze generation algorithm, and encodes each area of walkable space in the dungeon to into a Cell object.
+                        Cell objects hold information about what objects are in their location, and their wall configuration.
+                    </p>
+                <h3>
+                    First-Person Viewport Construction
+                </h3>
+                    <p>
+                        Arm to the Teeth's 3D dungeon is constructed using a series of carefully placed 2D animated wall sections, and are given a particular configuration based on the player's current location and the direction they are facing.
+                        As the player moves through the dungeon, the sprites in their view reveal hallways, distant enemies and dead ends.
+                    </p>
+                <h3>
+                    Mini Map Generation
+                </h3>
+                    <p>
+                        The mini map overlay that is revealed when players click the eye in the bottom left corner which provides a snapshot view of the places that the player has seen at a certain distance, what landmarks were there, and is hidden once the player begins moving. 
+                        This representation is carefully constructed by converting each playable space in the dungeon into a binary representation based on the configuration of its walls, which is then used to assign the proper sprite representation to each map "cell" in the mini map.
+                    </p>
+            <h2>
+                Creative
+            </h2>
+                <h3>
+                    Unique Resource Management Design
+                </h3>
+                    <p>
+                        Arm to the Teeth's name is in reference to its core mechanic centered around using arms found in the dungeon as weapons and as a way of replenishing a player's health. 
+                        Each arm has certain strength and condition attributes, but as a player moves through the endless dungeon their hunger grows and their health begins to dwindle. The only option for players to regain health is through taking bites of their only weapon, their arms. 
+                        When an arm is bitten, the arm is damaged, health and hunger are partially restored, and the player has a chance to lose one or more teeth.
+                        Players must explore each floor of the dungeon to collect as much teeth as possible because without teeth, they are unable to restore their health and hunger through consumption. 
+                        As players navigate the dungeon, they swap for new arms by eating their old ones, collect teeth to restore their health and hunger later, and find the entrance to the next floor once they feel ready.
+                    </p>
+                <h3>
+                    Stylized Combat
+                </h3>
+                    <p>
+                        Arm to the Teeth's combat system is encapsulated in a mini game that combines attack and defense.
+                        When players select an arm (or their head) to use to attack an enemy, the mini game begins. In this mini game, players use their movement buttons to flick out incoming teeth in the enemy's jaw, while defending their hand from the enemy's attacking tongue. 
+                        The teeth in the enemy's jaw are randomly generated and color coded based on their effects on the enemy. Green teeth build attack power and red teeth negate attack power. Hitting multiple teeth of the same type successively build a multiplier which can quickly help or hurt players.
+                        The attacking tongues also charge from random directions and are intended to cause a overwhelming struggle for the player's focus between building their attack carefully and defending themselves from the enemy.
+                        I went through several iterations of prototypes for the combat system until I felt strongly about this one. I started with simple dice rolling, then a spinning wheel that the player must stop to attack with the defense phase being a completely separate reaction-based mini game. After a critique of the combat system, I chose to combine attacking and defending to speed up the combat time and add a feeling of chaos to every fight.
+                    </p>
+                <h3>
+                    Art, Sound, and UI Design
+                </h3>
+                    <p>
+                        All of Arm to the Teeth's visuals and audio have been made solely by me. I intended to design around a theme of body horror while calling back to retro dungeon crawlers like Baroque (1998, Sega Saturn) and the Wizardry (1981-2024, PC) franchise in how I designed the user interface and programmed viewport representation.
+                        All sprites and animations were drawn by me using Aseprite and Pixquare. All audio was made by me using GarageBand, Audacity, and my synthesizer and sampler. 
+                    </p>
         <p>
             <a href="../index.html">Home</a>
         </p>
         <p>
-            <a href="../">Projects</a>
+            <a href="../projects.html">Projects</a>
         </p>
     </body>
 </html>
